@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "axis";
+  src: url("../fonts/axis.otf");
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../fonts/Montserrat-Bold.ttf");
+}
+@font-face {
+  font-family: "Montserrat-ExtraBold";
+  src: url("../fonts/Montserrat-ExtraBold.ttf");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+:root {
+  --primary-color: white;
+  --secondary-color: black;
+  --accent-color: #9f6263;
+  --title-font-size: 1.6em;
+  --btn-font-size: 20em;
+  --description-text-color: #494949;
+  --footer-bg-color: #edeff2;
+}
+
+body {
+  background-color: var(--primary-color);
+  max-width: 500px;
+  margin: auto;
+}
+
+.vertical-line {
+  border-left: 1px solid var(--secondary-color);
+  height: 15px;
+}
+
+.horizontal-space-filler {
+  width: 100%;
+}/*# sourceMappingURL=styles.css.map */

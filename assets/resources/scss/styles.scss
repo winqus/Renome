@@ -1,0 +1,18 @@
+@import './fonts';
+@import './resets';
+@import './variables';
+
+body {
+    background-color: var(--primary-color);
+    max-width: 500px;
+    margin: auto;
+}
+
+.vertical-line {
+  border-left: 1px solid var(--secondary-color);
+  height: 15px;
+}
+
+.horizontal-space-filler {
+  width: 100%;
+}
