@@ -31,6 +31,65 @@ a {
   --footer-bg-color: #edeff2;
 }
 
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+}
+
+.nav-menu {
+  min-height: 66px;
+}
+.nav-menu__header {
+  display: flex;
+  min-height: 66px;
+  justify-content: left;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+}
+.nav-menu__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 100%;
+}
+.nav-menu__item {
+  width: 100%;
+  padding-left: 10px;
+}
+.nav-menu__title {
+  font-family: Pacifico;
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: var(--title-font-size);
+  letter-spacing: 3px;
+}
+.nav-menu__btn {
+  padding-left: 1em;
+  padding-right: 1em;
+  justify-self: right;
+  display: flex;
+  font-size: 1em;
+}
+.nav-menu__btn--rightMost {
+  padding-right: 0px;
+}
+.nav-menu__icon {
+  color: var(--secondary-color);
+}
+.nav-menu__btnText {
+  font-family: "Montserrat-Bold";
+  font-weight: bold;
+  font-size: 0.8em;
+  align-self: flex-end;
+  margin-left: 11px;
+}
+
 body {
   background-color: var(--primary-color);
   max-width: 500px;
