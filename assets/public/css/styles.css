@@ -232,6 +232,50 @@ header {
   letter-spacing: 1.8px;
 }
 
+.footer {
+  --item-color: #1c2532;
+  width: 100%;
+  background-color: var(--footer-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 28px;
+  padding-bottom: 30px;
+}
+.footer__header {
+  font-family: "Montserrat-ExtraBold";
+  font-size: 0.7em;
+  color: var(--item-color);
+}
+.footer__icons {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: row;
+  color: var(--item-color);
+}
+.footer__icon {
+  border-radius: 50%;
+  border: 2px solid var(--item-color);
+  color: var(--item-color);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 5px;
+}
+.footer__company-title {
+  font-family: "Pacifico";
+  font-size: 1.3em;
+  margin-top: 24px;
+}
+.footer__copyright-text {
+  font-family: "Montserrat-ExtraBold";
+  font-size: 0.7em;
+  letter-spacing: 1px;
+  margin-top: 24px;
+}
+
 body {
   background-color: var(--primary-color);
   max-width: 500px;
