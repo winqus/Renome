@@ -7,16 +7,16 @@ header {
 }
 
 .nav-menu {
-  min-height: 66px;
+  min-height: 4.125rem;
 
   &__header {
     display: flex;
-    min-height: 66px;
+    min-height: 4.125rem;
     justify-content: left;
     align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 20px;
+    padding-left: .625rem;
+    padding-right: .625rem;
+    padding-bottom: 1.25rem;
   }
 
   &__list {
@@ -28,7 +28,7 @@ header {
 
   &__item {
     width: 100%;
-    padding-left: 10px;
+    padding-left: .625rem;
   }
 
   &__title {
@@ -36,18 +36,18 @@ header {
     color: var(--secondary-color);
     text-decoration: none;
     font-size: var(--title-font-size);
-    letter-spacing: 3px;
+    letter-spacing: .1875rem;
   }
 
   &__btn {
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 1rem;
+    padding-right: 1rem;
     justify-self: right;
     display: flex;
-    font-size: 1em;
+    font-size: 1rem;
 
     &--rightMost {
-      padding-right: 0px;
+      padding-right: 0;
     }
   }
 
@@ -58,8 +58,8 @@ header {
   &__btnText {
     font-family: 'Montserrat-Bold';
     font-weight: bold;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     align-self: flex-end;
-    margin-left: 11px;
+    margin-left: .6875rem;
   }
 }

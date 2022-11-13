@@ -1,17 +1,17 @@
 .gallery {
   background-color: #f7f7f7;
 
-  padding-top: 7px;
-  padding-bottom: 65px;
+  padding-top: .4375rem;
+  padding-bottom: 4.0625rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
   &__image-container {
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: 35px;
+    margin-left: .3125rem;
+    margin-right: .3125rem;
+    margin-top: 2.1875rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -20,37 +20,37 @@
 
   &__image {
     flex: 40%;
-    margin: 5px;
+    margin: .3125rem;
     width: 100%;
   }
 
   &__title {
-    margin-top: 54px;
-    margin-left: 9px;
+    margin-top: 3.375rem;
+    margin-left: .5625rem;
     font-family: 'axis';
     color: var(--secondary-color);
-    font-size: 2.4em;
-    letter-spacing: 8px;
+    font-size: 2.4rem;
+    letter-spacing: .5rem;
 
     &--alt {
-      margin-top: 9px;
+      margin-top: .5625rem;
       font-family: 'Montserrat-ExtraBold';
       color: var(--accent-color);
-      font-size: 0.7em;
-      letter-spacing: 1px;
+      font-size: 0.7rem;
+      letter-spacing: .0625rem;
     }
   }
 
   &__text {
-    margin-top: 16px;
-    margin-left: 10px;
-    margin-right: 12px;
-    margin-bottom: 65px;
+    margin-top: 1rem;
+    margin-left: .625rem;
+    margin-right: .75rem;
+    margin-bottom: 4.0625rem;
     font-family: 'Montserrat-Bold';
     color: var(--description-text-color);
-    font-size: 0.7em;
-    line-height: 30px;
+    font-size: 0.7rem;
+    line-height: 1.875rem;
     word-break: normal;
-    letter-spacing: 1.8px;
+    letter-spacing: .1125rem;
   }
 }

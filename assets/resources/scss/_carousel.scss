@@ -10,42 +10,45 @@
 
   &__text-wrapper {
     position: absolute;
-    // top: 232px;
     top: 51%;
-    left: 16px;
+    left: 1rem;
   }
 
   &__title {
     font-family: 'axis';
     color: var(--primary-color);
-    font-size: 1.65em;
-    letter-spacing: 4px;
+    font-size: 1.65rem;
+    letter-spacing: .25rem;
 
     &--alt {
-      margin-top: 3px;
+      margin-top: .1875rem;
       font-family: 'axis';
       color: var(--accent-color);
-      font-size: 1.4em;
-      letter-spacing: 1.5px;
+      font-size: 1.4rem;
+      letter-spacing: .0938rem;
     }
   }
 
   &__buttons {
     position: absolute;
-    bottom: 50px;
-    left: 15px;
+    bottom: 3.125rem;
+    left: .9375rem;
     display: flex;
   }
 
   &__btn {
-    margin-right: 15px;
-    border: 2px solid var(--primary-color);
-    width: 55px;
-    height: 55px;
+    margin-right: .9375rem;
+    border: .125rem solid var(--primary-color);
+    width: 3.4375rem;
+    height: 3.4375rem;
     color: var(--primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 1.25rem;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
   }
 }
