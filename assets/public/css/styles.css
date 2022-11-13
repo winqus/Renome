@@ -80,8 +80,6 @@ header {
   letter-spacing: 0.1875rem;
 }
 .nav-menu__btn {
-  padding-left: 1rem;
-  padding-right: 1rem;
   justify-self: right;
   display: flex;
   font-size: 1rem;
@@ -98,6 +96,11 @@ header {
   font-size: 0.8rem;
   align-self: flex-end;
   margin-left: 0.6875rem;
+}
+.nav-menu__vertical-line {
+  border-left: 0.0625rem solid var(--secondary-color);
+  height: 0.9375rem;
+  margin-inline: 1rem;
 }
 
 .carousel {
@@ -295,11 +298,6 @@ body {
   background-color: var(--primary-color);
   max-width: max(31.25rem, 50%);
   margin: auto;
-}
-
-.vertical-line {
-  border-left: 0.0625rem solid var(--secondary-color);
-  height: 0.9375rem;
 }
 
 .horizontal-space-filler {

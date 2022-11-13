@@ -40,8 +40,6 @@ header {
   }
 
   &__btn {
-    padding-left: 1rem;
-    padding-right: 1rem;
     justify-self: right;
     display: flex;
     font-size: 1rem;
@@ -62,4 +60,12 @@ header {
     align-self: flex-end;
     margin-left: .6875rem;
   }
+
+  &__vertical-line {
+    border-left: .0625rem solid var(--secondary-color);
+    height: .9375rem;
+    margin-inline: 1rem;
+  }
 }
+
+
