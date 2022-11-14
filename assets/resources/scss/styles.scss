@@ -1,0 +1,22 @@
+@import './fonts';
+@import './resets';
+@import './variables';
+@import './navMenu';
+@import './carousel';
+@import './about';
+@import './gallery';
+@import './footer';
+
+html {
+  font-size: 100%;
+}
+
+body {
+    background-color: var(--primary-color);
+    max-width: max(31.25rem, 30%);
+    margin: auto;
+}
+
+.horizontal-space-filler {
+  width: 100%;
+}

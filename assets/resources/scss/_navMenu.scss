@@ -1,0 +1,71 @@
+header {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+}
+
+.nav-menu {
+  min-height: 4.125rem;
+
+  &__header {
+    display: flex;
+    min-height: 4.125rem;
+    justify-content: left;
+    align-items: center;
+    padding-left: .625rem;
+    padding-right: .625rem;
+    padding-bottom: 1.25rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 100%;
+  }
+
+  &__item {
+    width: 100%;
+    padding-left: .625rem;
+  }
+
+  &__title {
+    font-family: Pacifico;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: var(--title-font-size);
+    letter-spacing: .1875rem;
+  }
+
+  &__btn {
+    justify-self: right;
+    display: flex;
+    font-size: 1rem;
+
+    &--rightMost {
+      padding-right: 0;
+    }
+  }
+
+  &__icon {
+    color: var(--secondary-color);
+  }
+
+  &__btnText {
+    font-family: 'Montserrat-Bold';
+    font-weight: bold;
+    font-size: 0.8rem;
+    align-self: flex-end;
+    margin-left: .6875rem;
+  }
+
+  &__vertical-line {
+    border-left: .0625rem solid var(--secondary-color);
+    height: .9375rem;
+    margin-inline: 1rem;
+  }
+}
+
+

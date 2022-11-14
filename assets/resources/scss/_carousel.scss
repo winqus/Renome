@@ -1,0 +1,50 @@
+.carousel {
+  width: 100%;
+  position: relative;
+
+  &__image {
+    width: 100%;
+    height: auto;
+    filter: brightness(90%);
+  }
+
+  &__text-wrapper {
+    position: absolute;
+    top: 51%;
+    left: 1rem;
+  }
+
+  &__title {
+    font-family: 'axis';
+    color: var(--primary-color);
+    font-size: 1.65rem;
+    letter-spacing: .25rem;
+
+    &--alt {
+      margin-top: .1875rem;
+      font-family: 'axis';
+      color: var(--accent-color);
+      font-size: 1.4rem;
+      letter-spacing: .0938rem;
+    }
+  }
+
+  &__buttons {
+    position: absolute;
+    bottom: 3.125rem;
+    left: .9375rem;
+    display: flex;
+  }
+
+  &__btn {
+    margin-right: .9375rem;
+    border: .125rem solid var(--primary-color);
+    width: 3.4375rem;
+    height: 3.4375rem;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+  }
+}
