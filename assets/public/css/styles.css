@@ -32,8 +32,8 @@ button {
 }
 
 :root {
-  --primary-color: white;
-  --secondary-color: black;
+  --primary-color: #fff;
+  --secondary-color: #000;
   --accent-color: #9f6263;
   --title-font-size: 1.6rem;
   --btn-font-size: 20rem;
