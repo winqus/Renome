@@ -79,6 +79,34 @@ header {
   font-size: var(--title-font-size);
   letter-spacing: 0.1875rem;
 }
+.nav-menu__cart-dropdown {
+  position: relative;
+}
+.nav-menu__cart-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 3.1875rem;
+  right: -1rem;
+  overflow: hidden;
+  z-index: 1;
+  font-family: "Montserrat-ExtraBold";
+  font-size: 0.75rem;
+  width: 7.2rem;
+}
+.nav-menu__cart-dropdown-content--show {
+  display: inherit;
+}
+.nav-menu__cart-dropdown-item {
+  background-color: var(--primary-color);
+  padding-top: 0.75rem;
+  padding-bottom: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-menu__cart-dropdown-item:hover {
+  background-color: #cacaca;
+}
 .nav-menu__btn {
   justify-self: right;
   display: flex;

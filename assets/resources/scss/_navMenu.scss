@@ -39,6 +39,43 @@ header {
     letter-spacing: .1875rem;
   }
 
+  &__cart-dropdown {
+    position: relative;
+  }
+
+  &__cart-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 3.1875rem;
+    right: -1rem;
+    overflow: hidden;
+    z-index: 1;
+    font-family: 'Montserrat-ExtraBold';
+    font-size: .75rem;
+
+    width: 7.2rem;
+
+    &--show {
+      display: inherit;
+    }
+  }
+
+  &__cart-dropdown-item {
+    background-color: var(--primary-color);
+
+    padding-top: 0.75rem;
+    padding-bottom: 1.2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &:hover {
+      background-color: #cacaca;
+    }
+  }
+
   &__btn {
     justify-self: right;
     display: flex;
