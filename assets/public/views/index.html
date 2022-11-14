@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script src="../js/main.js" defer></script>
 </head>
 <body>
     <header>
@@ -18,11 +19,11 @@
           <div class="horizontal-space-filler"></div>
 
           <div class="nav-menu__cart-dropdown">
-            <button class="nav-menu__btn">
+            <button id="cartBtn" class="nav-menu__btn">
               <i class="nav-menu__icon fa fa-shopping-cart"></i>
               <div class="nav-menu__btnText">2</div>
             </button>
-            <ul class="nav-menu__cart-dropdown-content nav-menu__cart-dropdown-content--show">
+            <ul id="cartDropdown" class="nav-menu__cart-dropdown-content">
               <li class="nav-menu__cart-dropdown-item">$44.50</li>
               <a href="#cart" class="nav-menu__cart-dropdown-item">View Cart</a>
               <a href="#checkout" class="nav-menu__cart-dropdown-item">Checkout</a>
