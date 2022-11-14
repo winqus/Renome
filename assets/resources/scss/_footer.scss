@@ -1,0 +1,50 @@
+.footer {
+  --item-color: #1c2532;
+
+  width: 100%;
+  background-color: var(--footer-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.75rem;
+  padding-bottom: 1.875rem;
+
+  &__header {
+    font-family: 'Montserrat-ExtraBold';
+    font-size: 0.7rem;
+    color: var(--item-color);
+  }
+
+  &__icons {
+    margin-top: .75rem;
+    display: flex;
+    flex-direction: row;
+    color: var(--item-color);
+  }
+
+  &__icon {
+    border-radius: 50%;
+    border: .125rem solid var(--item-color);
+    color: var(--item-color);
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: .3125rem;
+  }
+
+  &__company-title {
+    font-family: 'Pacifico';
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+  }
+
+  &__copyright-text {
+    font-family: 'Montserrat-ExtraBold';
+    font-size: 0.7rem;
+    letter-spacing: .0625rem;
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+}

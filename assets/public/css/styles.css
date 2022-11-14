@@ -1,0 +1,304 @@
+@font-face {
+  font-family: "axis";
+  src: url("../fonts/axis.otf");
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../fonts/Montserrat-Bold.ttf");
+}
+@font-face {
+  font-family: "Montserrat-ExtraBold";
+  src: url("../fonts/Montserrat-ExtraBold.ttf");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+:root {
+  --primary-color: #fff;
+  --secondary-color: #000;
+  --accent-color: #9f6263;
+  --title-font-size: 1.6rem;
+  --btn-font-size: 20rem;
+  --description-text-color: #494949;
+  --footer-bg-color: #edeff2;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+}
+
+.nav-menu {
+  min-height: 4.125rem;
+}
+.nav-menu__header {
+  display: flex;
+  min-height: 4.125rem;
+  justify-content: left;
+  align-items: center;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  padding-bottom: 1.25rem;
+}
+.nav-menu__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 100%;
+}
+.nav-menu__item {
+  width: 100%;
+  padding-left: 0.625rem;
+}
+.nav-menu__title {
+  font-family: Pacifico;
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: var(--title-font-size);
+  letter-spacing: 0.1875rem;
+}
+.nav-menu__btn {
+  justify-self: right;
+  display: flex;
+  font-size: 1rem;
+}
+.nav-menu__btn--rightMost {
+  padding-right: 0;
+}
+.nav-menu__icon {
+  color: var(--secondary-color);
+}
+.nav-menu__btnText {
+  font-family: "Montserrat-Bold";
+  font-weight: bold;
+  font-size: 0.8rem;
+  align-self: flex-end;
+  margin-left: 0.6875rem;
+}
+.nav-menu__vertical-line {
+  border-left: 0.0625rem solid var(--secondary-color);
+  height: 0.9375rem;
+  margin-inline: 1rem;
+}
+
+.carousel {
+  width: 100%;
+  position: relative;
+}
+.carousel__image {
+  width: 100%;
+  height: auto;
+  filter: brightness(90%);
+}
+.carousel__text-wrapper {
+  position: absolute;
+  top: 51%;
+  left: 1rem;
+}
+.carousel__title {
+  font-family: "axis";
+  color: var(--primary-color);
+  font-size: 1.65rem;
+  letter-spacing: 0.25rem;
+}
+.carousel__title--alt {
+  margin-top: 0.1875rem;
+  font-family: "axis";
+  color: var(--accent-color);
+  font-size: 1.4rem;
+  letter-spacing: 0.0938rem;
+}
+.carousel__buttons {
+  position: absolute;
+  bottom: 3.125rem;
+  left: 0.9375rem;
+  display: flex;
+}
+.carousel__btn {
+  margin-right: 0.9375rem;
+  border: 0.125rem solid var(--primary-color);
+  width: 3.4375rem;
+  height: 3.4375rem;
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+.about {
+  margin-top: 4.375rem;
+}
+.about__image-container {
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+  display: flex;
+  flex-direction: column;
+}
+.about__image--right {
+  margin-left: 1.875rem;
+}
+.about__image--left {
+  margin-right: 2.25rem;
+}
+.about__image--on-top {
+  margin-top: -2.25rem;
+}
+.about__title {
+  margin-top: 3.375rem;
+  margin-left: 0.5625rem;
+  font-family: "axis";
+  color: var(--secondary-color);
+  font-size: 2.4rem;
+  letter-spacing: 0.5rem;
+}
+.about__title--alt {
+  margin-top: 0.5625rem;
+  font-family: "Montserrat-ExtraBold";
+  color: var(--accent-color);
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+.about__text {
+  margin-top: 1rem;
+  margin-left: 0.625rem;
+  margin-right: 0.75rem;
+  margin-bottom: 4.0625rem;
+  font-family: "Montserrat-Bold";
+  color: var(--description-text-color);
+  font-size: 0.75rem;
+  line-height: 1.875rem;
+  word-break: normal;
+  letter-spacing: 0.1125rem;
+}
+
+.gallery {
+  background-color: #f7f7f7;
+  padding-top: 0.4375rem;
+  padding-bottom: 4.0625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gallery__image-container {
+  margin-left: 0.3125rem;
+  margin-right: 0.3125rem;
+  margin-top: 2.1875rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.gallery__image {
+  flex: 40%;
+  margin: 0.3125rem;
+  width: 100%;
+}
+.gallery__title {
+  margin-top: 3.375rem;
+  margin-left: 0.5625rem;
+  font-family: "axis";
+  color: var(--secondary-color);
+  font-size: 2.4rem;
+  letter-spacing: 0.5rem;
+}
+.gallery__title--alt {
+  margin-top: 0.5625rem;
+  font-family: "Montserrat-ExtraBold";
+  color: var(--accent-color);
+  font-size: 0.7rem;
+  letter-spacing: 0.0625rem;
+}
+.gallery__text {
+  margin-top: 1rem;
+  margin-left: 0.625rem;
+  margin-right: 0.75rem;
+  margin-bottom: 4.0625rem;
+  font-family: "Montserrat-Bold";
+  color: var(--description-text-color);
+  font-size: 0.7rem;
+  line-height: 1.875rem;
+  word-break: normal;
+  letter-spacing: 0.1125rem;
+}
+
+.footer {
+  --item-color: #1c2532;
+  width: 100%;
+  background-color: var(--footer-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.75rem;
+  padding-bottom: 1.875rem;
+}
+.footer__header {
+  font-family: "Montserrat-ExtraBold";
+  font-size: 0.7rem;
+  color: var(--item-color);
+}
+.footer__icons {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  color: var(--item-color);
+}
+.footer__icon {
+  border-radius: 50%;
+  border: 0.125rem solid var(--item-color);
+  color: var(--item-color);
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 0.3125rem;
+}
+.footer__company-title {
+  font-family: "Pacifico";
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+}
+.footer__copyright-text {
+  font-family: "Montserrat-ExtraBold";
+  font-size: 0.7rem;
+  letter-spacing: 0.0625rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: var(--primary-color);
+  max-width: max(31.25rem, 30%);
+  margin: auto;
+}
+
+.horizontal-space-filler {
+  width: 100%;
+}/*# sourceMappingURL=styles.css.map */
