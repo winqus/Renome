@@ -1,4 +1,4 @@
-const cartBtn = document.getElementById('cartBtn');
+const cartBtn = document.getElementById("cartBtn");
 const cartDropdown = document.getElementById("cartDropdown");
 
 function toggleCartDropdown() {

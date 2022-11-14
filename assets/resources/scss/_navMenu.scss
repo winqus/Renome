@@ -6,6 +6,12 @@ header {
   background-color: var(--primary-color);
 }
 
+@mixin nav-menu-item-padding {
+  padding-bottom: 25px;
+  padding-top: 25px;
+  padding-inline: .625rem;
+}
+
 .nav-menu {
   min-height: 4.125rem;
 
@@ -21,14 +27,12 @@ header {
 
   &__list {
     display: flex;
-    flex-direction: row;
-    justify-content: left;
+    flex-direction: column;
     width: 100%;
   }
 
   &__item {
     width: 100%;
-    padding-left: .625rem;
   }
 
   &__title {
@@ -37,6 +41,7 @@ header {
     text-decoration: none;
     font-size: var(--title-font-size);
     letter-spacing: .1875rem;
+    font-weight: 400;
   }
 
   &__cart-dropdown {
@@ -44,15 +49,13 @@ header {
   }
 
   &__cart-dropdown-content {
+    background-color: var(--primary-color);
     display: none;
     position: absolute;
     top: 3.1875rem;
     right: -1rem;
     overflow: hidden;
     z-index: 1;
-    font-family: 'Montserrat-ExtraBold';
-    font-size: .75rem;
-
     width: 7.2rem;
 
     &--show {
@@ -61,7 +64,10 @@ header {
   }
 
   &__cart-dropdown-item {
-    background-color: var(--primary-color);
+    font-family: 'Montserrat-Bold';
+    font-size: .75rem;
+    color: var(--text-color-dark);
+    letter-spacing: .0625rem;
 
     padding-top: 0.75rem;
     padding-bottom: 1.2rem;
@@ -70,9 +76,14 @@ header {
     justify-content: center;
     align-items: center;
 
-
     &:hover {
-      background-color: #cacaca;
+      color: var(--accent-color);
+    }
+
+    &--non-selectable {
+      &:hover {
+        color: var(--text-color-dark);
+      }
     }
   }
 
@@ -93,7 +104,8 @@ header {
   &__btnText {
     font-family: 'Montserrat-Bold';
     font-weight: bold;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
     align-self: flex-end;
     margin-left: .6875rem;
   }
