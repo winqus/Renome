@@ -1,8 +1,13 @@
 :root {
+  --max-content-width: max(31.25rem, 30%);
+
   --primary-color: #fff;
   --secondary-color: #000;
   --text-color-dark: #1e2633;
   --accent-color: #985e5b;
+  --icon-color-dark: #1d2533;
+  --icon-border-color-light: #ebebeb;
+  --icon-border-color-dark: #1e2633;
   --title-font-size: 1.6rem;
   --btn-font-size: 20rem;
   --description-text-color: #494949;

@@ -32,10 +32,14 @@ button {
 }
 
 :root {
+  --max-content-width: max(31.25rem, 30%);
   --primary-color: #fff;
   --secondary-color: #000;
   --text-color-dark: #1e2633;
   --accent-color: #985e5b;
+  --icon-color-dark: #1d2533;
+  --icon-border-color-light: #ebebeb;
+  --icon-border-color-dark: #1e2633;
   --title-font-size: 1.6rem;
   --btn-font-size: 20rem;
   --description-text-color: #494949;
@@ -66,10 +70,85 @@ header {
 .nav-menu__list {
   display: flex;
   flex-direction: column;
+  position: fixed;
   width: 100%;
+  max-width: var(--max-content-width);
+  background-color: var(--primary-color);
+  z-index: 1;
+}
+.nav-menu__list--hide-vertical {
+  transition: all 450ms ease-in-out 0ms;
+  opacity: 0;
+  top: -100%;
+}
+.nav-menu__list--show-vertical {
+  transition: all 450ms ease-in-out 0ms;
+  top: 4.125rem;
+}
+.nav-menu__list--hide-horizontal {
+  transition: all 450ms ease-in-out 0ms;
+  opacity: 0;
+  margin-left: -100%;
+}
+.nav-menu__list--show-horizontal {
+  transition: all 450ms ease-in-out 0ms;
+  margin-left: 0;
 }
 .nav-menu__item {
+  padding-inline: 0.625rem;
+  color: var(--secondary-color);
   width: 100%;
+  font-family: "Montserrat-ExtraBold";
+  letter-spacing: 0.125rem;
+  font-size: 0.75rem;
+  line-height: 4.0625rem;
+  border-top: 0.0625rem solid #f2f2f2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-menu__item--selected {
+  color: var(--accent-color);
+}
+.nav-menu__item:hover {
+  color: var(--accent-color);
+}
+.nav-menu__item > a {
+  color: inherit;
+}
+.nav-menu__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.0625rem solid var(--icon-border-color-light);
+  width: 2.6875rem;
+  height: 2.6875rem;
+  color: var(--icon-color-dark);
+  font-size: 0.75rem;
+}
+.nav-menu__button:hover {
+  border: 0.0625rem solid var(--icon-border-color-dark);
+  color: var(--primary-color);
+  background-color: var(--icon-color-dark);
+}
+.nav-menu__search-item {
+  padding-inline: 0.625rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0;
+}
+.nav-menu__search-item-input {
+  font-family: "Montserrat-Bold";
+  letter-spacing: 0.125rem;
+  font-size: 0.75rem;
+  line-height: 4.0625rem;
+  border: 0;
+  color: #bbbdbf;
+  width: 90%;
+}
+.nav-menu__search-item-icon {
+  font-size: 0.75rem;
 }
 .nav-menu__title {
   font-family: Pacifico;
@@ -329,7 +408,7 @@ html {
 
 body {
   background-color: var(--primary-color);
-  max-width: max(31.25rem, 30%);
+  max-width: var(--max-content-width);
   margin: auto;
 }
 

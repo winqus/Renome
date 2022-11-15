@@ -31,10 +31,38 @@
           </div>
 
           <span class="nav-menu__vertical-line"></span>
-          <button class="nav-menu__btn nav-menu__btn--rightMost">
+          <button id="navBtn" class="nav-menu__btn nav-menu__btn--rightMost">
             <i class="nav-menu__icon fa fa-bars"></i>
           </button>
         </div>
+
+        <ul id="navMenu" class="nav-menu__list nav-menu__list--hide-vertical">
+          <div class="nav-menu__search-item">
+            <input type=""  class="nav-menu__search-item-input" placeholder="Search...">
+            <button><i class="nav-menu__search-item-icon fas fa-search"></i></button>
+          </div>
+          <a href="#home" class="nav-menu__item nav-menu__item--selected">HOME</a>
+          <a href="#about" class="nav-menu__item">ABOUT</a>
+          <a href="#menu" class="nav-menu__item">MENU</a>
+          <a href="#reservations" class="nav-menu__item">RESERVATIONS</a>
+          <a href="#blog" class="nav-menu__item">BLOG</a>
+          <div class="nav-menu__item">
+            <a href="#features" class="">FEATURES</a>
+            <button id="featuresBtn" class="nav-menu__button"><i class="fa fa-chevron-right"></i></button>
+          </div>
+          <a href="#shop" class="nav-menu__item">SHOP</a>
+          <a href="#contact" class="nav-menu__item">CONTACT</a>
+        </ul>
+
+        <ul id="featuresSubMenu" class="nav-menu__list nav-menu__list--hide-horizontal">
+          <div id="backBtn" class="nav-menu__item">
+            <button  class="nav-menu__button"><i class="fa fa-chevron-left"></i></button>
+            <a href="#features" class="">BACK</a>
+          </div>
+          <a href="#blog" class="nav-menu__item">One page</a>
+          <a href="#home" class="nav-menu__item nav-menu__item">Portfolio</a>
+          <a href="#blog" class="nav-menu__item">Shortcodes</a>
+        </ul>
       </nav>
 
     </header>

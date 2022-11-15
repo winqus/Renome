@@ -7,17 +7,17 @@ header {
 }
 
 @mixin nav-menu-item-padding {
-  padding-bottom: 25px;
-  padding-top: 25px;
   padding-inline: .625rem;
 }
 
 .nav-menu {
-  min-height: 4.125rem;
+  $nav-menu-height: 4.125rem;
+
+  min-height: $nav-menu-height;
 
   &__header {
     display: flex;
-    min-height: 4.125rem;
+    min-height: $nav-menu-height;
     justify-content: left;
     align-items: center;
     padding-left: .625rem;
@@ -28,11 +28,106 @@ header {
   &__list {
     display: flex;
     flex-direction: column;
+    position: fixed;
     width: 100%;
+    max-width: var(--max-content-width);
+
+    background-color: var(--primary-color);
+    z-index: 1;
+
+    &--hide-vertical {
+      transition: all 450ms ease-in-out 0ms;
+      opacity: 0;
+      top: -100%;
+    }
+
+    &--show-vertical {
+      transition: all 450ms ease-in-out 0ms;
+      top: $nav-menu-height;
+    }
+
+    &--hide-horizontal {
+      transition: all 450ms ease-in-out 0ms;
+      opacity: 0;
+      margin-left: -100%;
+    }
+
+    &--show-horizontal {
+      transition: all 450ms ease-in-out 0ms;
+      margin-left: 0;
+    }
   }
 
   &__item {
+    @include nav-menu-item-padding;
+
+    color: var(--secondary-color);
     width: 100%;
+
+    font-family: 'Montserrat-ExtraBold';
+    letter-spacing: .125rem;
+    font-size: 0.75rem;
+    line-height: 4.0625rem;
+
+    border-top: .0625rem solid #f2f2f2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--selected {
+      color: var(--accent-color);
+    }
+
+    &:hover {
+      color: var(--accent-color);
+    }
+
+    > a {
+      color: inherit;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .0625rem solid var(--icon-border-color-light);
+    width: 2.6875rem;
+    height: 2.6875rem;
+    color: var(--icon-color-dark);
+    font-size: .75rem;
+
+    &:hover {
+      border: .0625rem solid var(--icon-border-color-dark);
+      color: var(--primary-color);
+      background-color: var(--icon-color-dark)
+    }
+  }
+
+  &__search-item {
+    @include nav-menu-item-padding;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 0;
+
+    &-input {
+      font-family: 'Montserrat-Bold';
+      letter-spacing: .125rem;
+      font-size: 0.75rem;
+      line-height: 4.0625rem;
+      border: 0;
+      color: #bbbdbf;
+
+      width: 90%;
+    }
+
+    &-icon {
+      font-size: .75rem;
+    }
   }
 
   &__title {
@@ -116,5 +211,3 @@ header {
     margin-inline: 1rem;
   }
 }
-
-
