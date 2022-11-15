@@ -50,11 +50,13 @@ header {
       transition: all 450ms ease-in-out 0ms;
       opacity: 0;
       margin-left: -100%;
+      top: $nav-menu-height;
     }
 
     &--show-horizontal {
       transition: all 450ms ease-in-out 0ms;
       margin-left: 0;
+      top: $nav-menu-height;
     }
   }
 
@@ -77,6 +79,10 @@ header {
 
     &--selected {
       color: var(--accent-color);
+    }
+
+    &--no-top-border {
+      border-top: 0;
     }
 
     &:hover {
