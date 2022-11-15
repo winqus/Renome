@@ -7,8 +7,8 @@ header {
 }
 
 @mixin nav-menu-item-padding {
-  padding-bottom: 25px;
-  padding-top: 25px;
+  padding-bottom: 1.5625rem;
+  padding-top: 1.5625rem;
   padding-inline: .625rem;
 }
 
@@ -105,7 +105,7 @@ header {
     font-family: 'Montserrat-Bold';
     font-weight: bold;
     font-size: 0.75rem;
-    letter-spacing: 2px;
+    letter-spacing: .125rem;
     align-self: flex-end;
     margin-left: .6875rem;
   }
