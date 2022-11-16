@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script src="../js/main.js" defer></script>
 </head>
 <body>
     <header>
@@ -16,16 +17,26 @@
         <div class="nav-menu__header">
           <a href="#" class="nav-menu__title">Renome</a>
           <div class="horizontal-space-filler"></div>
-          <button class="nav-menu__btn">
-            <i class="nav-menu__icon fa fa-shopping-cart"></i>
-            <div class="nav-menu__btnText">2</div>
-          </button>
+
+          <div class="nav-menu__cart-dropdown">
+            <button id="cartBtn" class="nav-menu__btn">
+              <i class="nav-menu__icon fa fa-shopping-cart"></i>
+              <div class="nav-menu__btnText">2</div>
+            </button>
+            <ul id="cartDropdown" class="nav-menu__cart-dropdown-content">
+              <li class="nav-menu__cart-dropdown-item nav-menu__cart-dropdown-item--non-selectable">$44.50</li>
+              <a href="#cart" class="nav-menu__cart-dropdown-item">View Cart</a>
+              <a href="#checkout" class="nav-menu__cart-dropdown-item">Checkout</a>
+            </ul>
+          </div>
+
           <span class="nav-menu__vertical-line"></span>
           <button class="nav-menu__btn nav-menu__btn--rightMost">
             <i class="nav-menu__icon fa fa-bars"></i>
           </button>
         </div>
       </nav>
+
     </header>
 
     <section class="carousel">
