@@ -31,7 +31,8 @@ header {
     position: fixed;
     width: 100%;
     max-width: var(--max-content-width);
-
+    overflow-y: scroll;
+    max-height: calc(100vh - $nav-menu-height);
     background-color: var(--primary-color);
     z-index: 1;
 
@@ -39,6 +40,7 @@ header {
       transition: all 450ms ease-in-out;
       opacity: 0;
       top: -100%;
+      pointer-events: none;
     }
 
     &--show-vertical {
@@ -51,6 +53,7 @@ header {
       opacity: 0;
       margin-left: -100%;
       top: $nav-menu-height;
+      pointer-events: none;
     }
 
     &--show-horizontal {
