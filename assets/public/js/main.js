@@ -1,32 +1,8 @@
 const cartBtn = document.getElementById("cartBtn");
 const cartDropdown = document.getElementById("cartDropdown");
-const mainNavButtonId = "navBtn";
-const navMenu = new NavMenu(
-  document.getElementById("navMenu"),
-  "nav-menu__list--show-vertical",
-  "nav-menu__list--hide-vertical"
-);
-const featuresSideNavMenu = new NavMenu(
-  document.getElementById("featuresSubMenu"),
-  "nav-menu__list--show-horizontal",
-  "nav-menu__list--hide-horizontal"
-);
-const navManager = new NavManager([navMenu, featuresSideNavMenu], navMenu);
-const navBtn = new NavButton(
-  document.getElementById(mainNavButtonId),
-  navManager,
-  navMenu
-);
-const featuresSubNavBtn = new NavButton(
-  document.getElementById("featuresBtn"),
-  navManager,
-  featuresSideNavMenu
-);
-const backBtn = new NavButton(
-  document.getElementById("backBtn"),
-  navManager,
-  navMenu
-);
+const mainNavMenu = document.getElementById("navMenu");
+const featureSubNavMenu = document.getElementById("featuresSubMenu");
+const mainNavMenuButton = document.getElementById("navBtn");
 
 function toggleCartDropdown() {
   cartDropdown.classList.toggle("nav-menu__cart-dropdown-content--show");
@@ -34,53 +10,48 @@ function toggleCartDropdown() {
 
 cartBtn.onclick = toggleCartDropdown;
 
-function NavMenu(element, showClass, hideClass) {
-  this.element = element;
-  this.showClasses = showClass;
-  this.hideClasses = hideClass;
+mainNavMenuButton.onclick = () => {
+  if (mainNavMenuButton.classList.contains("nav-menu__button--active")) {
+    mainNavMenuButton.classList.remove("nav-menu__button--active");
+    mainNavMenu.classList.replace(
+      "nav-menu__list--show-vertical",
+      "nav-menu__list--hide-vertical"
+    );
+    featureSubNavMenu.classList.replace(
+      "nav-menu__list--show-horizontal",
+      "nav-menu__list--hide-horizontal"
+    );
+    mainNavMenuButton.children[0].classList.replace("nav-menu__icon--hide", "nav-menu__icon--show");
+    mainNavMenuButton.children[1].classList.replace("nav-menu__icon--show", "nav-menu__icon--hide");
+  } else {
+    mainNavMenuButton.classList.add("nav-menu__button--active");
+    mainNavMenu.classList.replace(
+      "nav-menu__list--hide-vertical",
+      "nav-menu__list--show-vertical"
+      );
+    mainNavMenuButton.children[0].classList.replace("nav-menu__icon--show", "nav-menu__icon--hide");
+    mainNavMenuButton.children[1].classList.replace("nav-menu__icon--hide", "nav-menu__icon--show");
+  }
+};
 
-  this.ShowNavigation = () => this.element.classList.replace(hideClass, showClass);
+document.getElementById("featuresBtn").onclick = () => {
+  mainNavMenu.classList.replace(
+    "nav-menu__list--show-vertical",
+    "nav-menu__list--hide-vertical"
+  );
+  featureSubNavMenu.classList.replace(
+    "nav-menu__list--hide-horizontal",
+    "nav-menu__list--show-horizontal"
+  );
+};
 
-  this.HideNavigation = () => this.element.classList.replace(showClass, hideClass);
-
-  this.NavigationIsOpen = () => this.element.classList.contains(showClass);
-
-  this.HideNavigation();
-}
-
-function NavButton(element, navManager, targetMenu) {
-  this.element = element;
-  this.navManager = navManager;
-  this.targetMenu = targetMenu;
-
-  this.Toggle = () => {
-    if (this.targetMenu.NavigationIsOpen()) {
-      this.navManager.HideNavMenusOrExceptOne();
-    } else {
-      if (
-        this.element.id != mainNavButtonId ||
-        this.navManager.IsAnyNavOpen() == false
-      ) {
-        this.targetMenu.ShowNavigation();
-      }
-      this.navManager.HideNavMenusOrExceptOne(targetMenu);
-    }
-  };
-
-  this.element.onclick = this.Toggle;
-}
-
-function NavManager(menuList, mainNavMenu) {
-  this.menus = menuList;
-  this.mainNav = mainNavMenu;
-
-  this.HideNavMenusOrExceptOne = (exceptionMenu = null) => {
-    this.menus.forEach((menu) => {
-      if (menu != exceptionMenu) {
-        menu.HideNavigation();
-      }
-    });
-  };
-
-  this.IsAnyNavOpen = () => this.menus.some((menu) => menu.NavigationIsOpen());
-}
+document.getElementById("backBtn").onclick = () => {
+  mainNavMenu.classList.replace(
+    "nav-menu__list--hide-vertical",
+    "nav-menu__list--show-vertical"
+  );
+  featureSubNavMenu.classList.replace(
+    "nav-menu__list--show-horizontal",
+    "nav-menu__list--hide-horizontal"
+  );
+};
