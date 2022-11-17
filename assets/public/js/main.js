@@ -21,16 +21,12 @@ mainNavMenuButton.onclick = () => {
       "nav-menu__list--show-horizontal",
       "nav-menu__list--hide-horizontal"
     );
-    mainNavMenuButton.children[0].classList.replace("nav-menu__icon--hide", "nav-menu__icon--show");
-    mainNavMenuButton.children[1].classList.replace("nav-menu__icon--show", "nav-menu__icon--hide");
   } else {
     mainNavMenuButton.classList.add("nav-menu__button--active");
     mainNavMenu.classList.replace(
       "nav-menu__list--hide-vertical",
       "nav-menu__list--show-vertical"
       );
-    mainNavMenuButton.children[0].classList.replace("nav-menu__icon--show", "nav-menu__icon--hide");
-    mainNavMenuButton.children[1].classList.replace("nav-menu__icon--hide", "nav-menu__icon--show");
   }
 };
 
