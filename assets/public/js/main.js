@@ -3,6 +3,7 @@ const cartDropdown = document.getElementById("cartDropdown");
 const mainNavMenu = document.getElementById("navMenu");
 const featureSubNavMenu = document.getElementById("featuresSubMenu");
 const mainNavMenuButton = document.getElementById("navBtn");
+const navHambugerIcon = document.getElementById("navHambugerIcon");
 
 function toggleCartDropdown() {
   cartDropdown.classList.toggle("nav-menu__cart-dropdown-content--show");
@@ -13,6 +14,7 @@ cartBtn.onclick = toggleCartDropdown;
 mainNavMenuButton.onclick = () => {
   if (mainNavMenuButton.classList.contains("nav-menu__button--active")) {
     mainNavMenuButton.classList.remove("nav-menu__button--active");
+    navHambugerIcon.classList.remove("icon-hamburger--active");
     mainNavMenu.classList.replace(
       "nav-menu__list--show-vertical",
       "nav-menu__list--hide-vertical"
@@ -26,7 +28,8 @@ mainNavMenuButton.onclick = () => {
     mainNavMenu.classList.replace(
       "nav-menu__list--hide-vertical",
       "nav-menu__list--show-vertical"
-      );
+    );
+    navHambugerIcon.classList.add("icon-hamburger--active");
   }
 };
 

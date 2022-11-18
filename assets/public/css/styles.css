@@ -40,7 +40,7 @@ button {
   --icon-color-dark: #1d2533;
   --icon-border-color-light: #ebebeb;
   --icon-border-color-dark: #1e2633;
-  --title-font-size: 1.6rem;
+  --title-font-size: 1.5625rem;
   --btn-font-size: 20rem;
   --description-text-color: #494949;
   --footer-bg-color: #edeff2;
@@ -211,6 +211,31 @@ header {
 .nav-menu__icon {
   color: var(--secondary-color);
 }
+.nav-menu__icon-hamburger {
+  border: var(--icon-color-dark) solid 1px;
+  position: absolute;
+  background-color: var(--icon-color-dark);
+  width: 1.125rem;
+  height: 0.125rem;
+  border-radius: 0.0625rem;
+}
+.nav-menu__icon-hamburger::before, .nav-menu__icon-hamburger::after {
+  content: "";
+  background-color: var(--icon-color-dark);
+  width: 1.125rem;
+  height: 0.125rem;
+  position: absolute;
+  border-radius: 0.0625rem;
+  display: block;
+  left: -0.0625rem;
+  top: -0.0625rem;
+}
+.nav-menu__icon-hamburger::before {
+  transform: translateY(-0.3125rem);
+}
+.nav-menu__icon-hamburger::after {
+  transform: translateY(0.3125rem);
+}
 .nav-menu__btnText {
   font-family: "Montserrat-Bold";
   font-weight: bold;
@@ -222,7 +247,53 @@ header {
 .nav-menu__vertical-line {
   border-left: 0.0625rem solid var(--secondary-color);
   height: 0.9375rem;
-  margin-inline: 1rem;
+  margin-inline: 0.875rem;
+}
+
+.icon-hamburger {
+  width: 1.125rem;
+  height: 0.9375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-hamburger__bars {
+  width: 1.125rem;
+  height: 0.1rem;
+  background-color: var(--icon-color-dark);
+  position: absolute;
+  border-radius: 0.0625rem;
+  transition: all 450ms ease-in-out;
+}
+.icon-hamburger__bars::before, .icon-hamburger__bars::after {
+  content: "";
+  width: 1.125rem;
+  height: 0.1rem;
+  background-color: var(--icon-color-dark);
+  position: absolute;
+  border-radius: 0.0625rem;
+  margin-left: -0.5625rem;
+  transform: rotateZ(0deg);
+}
+.icon-hamburger__bars::before {
+  transform: translateY(-0.4rem);
+  transition: all 450ms ease-in-out;
+}
+.icon-hamburger__bars::after {
+  transform: translateY(0.4rem);
+  transition: all 450ms ease-in-out;
+}
+.icon-hamburger--active > .icon-hamburger__bars {
+  transition: all 450ms ease-in-out;
+  background-color: rgba(255, 255, 255, 0);
+}
+.icon-hamburger--active > .icon-hamburger__bars::before {
+  transform: rotateZ(45deg);
+  transition: all 450ms ease-in-out;
+}
+.icon-hamburger--active > .icon-hamburger__bars::after {
+  transform: rotateZ(-45deg);
+  transition: all 450ms ease-in-out;
 }
 
 .carousel {
@@ -367,7 +438,6 @@ header {
 }
 
 .footer {
-  --item-color: #1c2532;
   width: 100%;
   background-color: var(--footer-bg-color);
   display: flex;
@@ -378,37 +448,39 @@ header {
 }
 .footer__header {
   font-family: "Montserrat-ExtraBold";
-  font-size: 0.7rem;
-  color: var(--item-color);
+  font-size: 0.75rem;
+  color: var(--text-color-dark);
 }
 .footer__icons {
   margin-top: 0.75rem;
   display: flex;
   flex-direction: row;
-  color: var(--item-color);
 }
 .footer__icon {
   border-radius: 50%;
-  border: 0.125rem solid var(--item-color);
-  color: var(--item-color);
-  width: 2rem;
-  height: 2rem;
+  border: 0.125rem solid var(--icon-border-color-dark);
+  color: var(--icon-color-dark);
+  width: 2.125rem;
+  height: 2.125rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-inline: 0.3125rem;
+  margin-inline: 0.2813rem;
 }
 .footer__company-title {
   font-family: "Pacifico";
-  font-size: 1.3rem;
+  letter-spacing: 0.125rem;
+  font-size: 1.25rem;
   margin-top: 1.5rem;
+  color: var(--text-color-dark);
 }
 .footer__copyright-text {
   font-family: "Montserrat-ExtraBold";
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   letter-spacing: 0.0625rem;
   margin-top: 1.5rem;
   text-align: center;
+  color: var(--text-color-dark);
 }
 
 html {

@@ -7,7 +7,7 @@ header {
 }
 
 @mixin nav-menu-item-padding {
-  padding-inline: .625rem;
+  padding-inline: 0.625rem;
 }
 
 .nav-menu {
@@ -20,8 +20,8 @@ header {
     min-height: $nav-menu-height;
     justify-content: left;
     align-items: center;
-    padding-left: .625rem;
-    padding-right: .625rem;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
     padding-bottom: 1.25rem;
   }
 
@@ -69,12 +69,12 @@ header {
     color: var(--secondary-color);
     width: 100%;
 
-    font-family: 'Montserrat-ExtraBold';
-    letter-spacing: .125rem;
+    font-family: "Montserrat-ExtraBold";
+    letter-spacing: 0.125rem;
     font-size: 0.75rem;
     line-height: 4.0625rem;
 
-    border-top: .0625rem solid #f2f2f2;
+    border-top: 0.0625rem solid #f2f2f2;
 
     display: flex;
     justify-content: space-between;
@@ -101,16 +101,16 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: .0625rem solid var(--icon-border-color-light);
+    border: 0.0625rem solid var(--icon-border-color-light);
     width: 2.6875rem;
     height: 2.6875rem;
     color: var(--icon-color-dark);
-    font-size: .75rem;
+    font-size: 0.75rem;
 
     &:hover {
-      border: .0625rem solid var(--icon-border-color-dark);
+      border: 0.0625rem solid var(--icon-border-color-dark);
       color: var(--primary-color);
-      background-color: var(--icon-color-dark)
+      background-color: var(--icon-color-dark);
     }
   }
 
@@ -124,8 +124,8 @@ header {
     border: 0;
 
     &-input {
-      font-family: 'Montserrat-Bold';
-      letter-spacing: .125rem;
+      font-family: "Montserrat-Bold";
+      letter-spacing: 0.125rem;
       font-size: 0.75rem;
       line-height: 4.0625rem;
       border: 0;
@@ -135,7 +135,7 @@ header {
     }
 
     &-icon {
-      font-size: .75rem;
+      font-size: 0.75rem;
     }
   }
 
@@ -144,7 +144,7 @@ header {
     color: var(--secondary-color);
     text-decoration: none;
     font-size: var(--title-font-size);
-    letter-spacing: .1875rem;
+    letter-spacing: 0.1875rem;
     font-weight: 400;
   }
 
@@ -168,10 +168,10 @@ header {
   }
 
   &__cart-dropdown-item {
-    font-family: 'Montserrat-Bold';
-    font-size: .75rem;
+    font-family: "Montserrat-Bold";
+    font-size: 0.75rem;
     color: var(--text-color-dark);
-    letter-spacing: .0625rem;
+    letter-spacing: 0.0625rem;
 
     padding-top: 0.75rem;
     padding-bottom: 1.2rem;
@@ -205,18 +205,104 @@ header {
     color: var(--secondary-color);
   }
 
+  &__icon-hamburger {
+    border: var(--icon-color-dark) solid 1px; //temp
+    position: absolute;
+    // left: 50%;
+    background-color: var(--icon-color-dark);
+    width: 1.125rem;
+    height: 0.125rem;
+    border-radius: 0.0625rem;
+
+    &::before,
+    &::after {
+      content: "";
+      background-color: var(--icon-color-dark);
+      width: 1.125rem;
+      height: 0.125rem;
+      position: absolute;
+      border-radius: 0.0625rem;
+      display: block;
+      left: -0.0625rem;
+      top: -0.0625rem;
+    }
+
+    &::before {
+      transform: translateY(-0.3125rem);
+    }
+
+    &::after {
+      transform: translateY(0.3125rem);
+    }
+  }
+
   &__btnText {
-    font-family: 'Montserrat-Bold';
+    font-family: "Montserrat-Bold";
     font-weight: bold;
     font-size: 0.75rem;
-    letter-spacing: .125rem;
+    letter-spacing: 0.125rem;
     align-self: flex-end;
-    margin-left: .6875rem;
+    margin-left: 0.6875rem;
   }
 
   &__vertical-line {
-    border-left: .0625rem solid var(--secondary-color);
-    height: .9375rem;
-    margin-inline: 1rem;
+    border-left: 0.0625rem solid var(--secondary-color);
+    height: 0.9375rem;
+    margin-inline: 0.875rem;
   }
 }
+
+.icon-hamburger {
+  $bar-distance-between: 0.4rem;
+  @mixin SingleBarProperties {
+    width: 1.125rem;
+    height: 0.1rem;
+    background-color: var(--icon-color-dark);
+    position: absolute;
+    border-radius: 0.0625rem;
+  }
+
+  width: 1.125rem;
+  height: 0.9375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__bars {
+    @include SingleBarProperties();
+    transition: all 450ms ease-in-out;
+
+    &::before,
+    &::after {
+      content: "";
+      @include SingleBarProperties();
+      margin-left: -0.5625rem;
+      transform: rotateZ(0deg);
+    }
+
+    &::before {
+      transform: translateY(-$bar-distance-between);
+      transition: all 450ms ease-in-out;
+    }
+
+    &::after {
+      transform: translateY($bar-distance-between);
+      transition: all 450ms ease-in-out;
+    }
+  }
+
+  &--active > .icon-hamburger__bars {
+    transition: all 450ms ease-in-out;
+    background-color: #ffffff00;
+    &::before {
+      transform: rotateZ(45deg);
+      transition: all 450ms ease-in-out;
+    }
+    &::after {
+      transform: rotateZ(-45deg);
+      transition: all 450ms ease-in-out;
+    }
+  }
+}
+
+
