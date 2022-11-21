@@ -27,7 +27,6 @@ const setSlidePosition = (slide, index) => {
 const moveToSlide = (slide) => {
   slideTrack.style.transform = `translateX(-${slide.style.left})`.replace('--', '');
 };
-
 const instantMoveToSlide = (slide) => {
   slideTrack.classList.remove('carousel__slide-track--sliding');
   moveToSlide(slide);
@@ -63,6 +62,19 @@ const startCarouselTimeout = (milliseconds) => {
     setTimeout(() => { isCarouselSlidable = true; }, milliseconds);
   }
 };
+const closeAllNavMenus = () => {
+  mainNavMenuButton.classList.remove('nav-menu__button--active');
+  navHambugerIcon.classList.remove('icon-hamburger--active');
+  mainNavMenu.classList.replace(
+    'nav-menu__list--show-vertical',
+    'nav-menu__list--hide-vertical',
+  );
+  featureSubNavMenu.classList.replace(
+    'nav-menu__list--show-horizontal',
+    'nav-menu__list--hide-horizontal',
+  );
+};
+const isCartDropdownOpen = () => cartDropdown.classList.contains('nav-menu__cart-dropdown-content--show');
 
 function toggleCartDropdown() {
   cartDropdown.classList.toggle('nav-menu__cart-dropdown-content--show');
@@ -72,16 +84,7 @@ cartBtn.onclick = toggleCartDropdown;
 
 mainNavMenuButton.onclick = () => {
   if (mainNavMenuButton.classList.contains('nav-menu__button--active')) {
-    mainNavMenuButton.classList.remove('nav-menu__button--active');
-    navHambugerIcon.classList.remove('icon-hamburger--active');
-    mainNavMenu.classList.replace(
-      'nav-menu__list--show-vertical',
-      'nav-menu__list--hide-vertical',
-    );
-    featureSubNavMenu.classList.replace(
-      'nav-menu__list--show-horizontal',
-      'nav-menu__list--hide-horizontal',
-    );
+    closeAllNavMenus();
   } else {
     mainNavMenuButton.classList.add('nav-menu__button--active');
     mainNavMenu.classList.replace(
@@ -129,5 +132,18 @@ window.onresize = () => {
   instantMoveToSlide(getCurrentSlide());
 };
 
+window.onclick = (event) => {
+  const menuElements = [mainNavMenu, featureSubNavMenu, mainNavMenuButton];
+  if (!menuElements.some((element) => element.contains(event.target))) {
+    closeAllNavMenus();
+  }
+
+  const cartMenuElements = [cartBtn, cartDropdown];
+  if (!cartMenuElements.some((element) => element.contains(event.target)) && isCartDropdownOpen()) {
+    toggleCartDropdown();
+  }
+};
+
 positionSlidesFromSlideIndex();
 setCarouselHeightToSlideImageHeight();
+setTimeout()
