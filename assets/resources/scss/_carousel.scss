@@ -1,46 +1,77 @@
 .carousel {
   width: 100%;
+  height: 450px;
   position: relative;
+
+  &__slide-track-container {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__slide-track {
+    position: relative;
+    height: 100%;
+    list-style: none;
+
+    &--sliding {
+      transition: transform 450ms ease-in;
+    }
+  }
+
+  &__slide {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+  }
 
   &__image {
     width: 100%;
-    height: auto;
-    filter: brightness(90%);
+  }
+
+  &__image-overlay-blue {
+    position: absolute;
+    opacity: 0.122;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #1d2533;
   }
 
   &__text-wrapper {
     position: absolute;
     top: 51%;
-    left: 1rem;
+    left: 1.1875rem;
   }
 
   &__title {
-    font-family: 'axis';
+    font-family: "axis";
     color: var(--primary-color);
-    font-size: 1.65rem;
-    letter-spacing: .25rem;
+    font-size: 1.75rem;
+    letter-spacing: 0.1875rem;
 
-    &--alt {
-      margin-top: .1875rem;
-      font-family: 'axis';
+    &--sub {
+      font-family: "Montserrat-Bold";
+      font-size: 1.375rem;
+      letter-spacing: 0.125rem;
       color: var(--accent-color);
-      font-size: 1.4rem;
-      letter-spacing: .0938rem;
+      margin-top: 0.1875rem;
     }
   }
 
   &__buttons {
     position: absolute;
     bottom: 3.125rem;
-    left: .9375rem;
+    left: 1.25rem;
     display: flex;
   }
 
   &__btn {
-    margin-right: .9375rem;
-    border: .125rem solid var(--primary-color);
-    width: 3.4375rem;
-    height: 3.4375rem;
+    margin-right: 0.875rem;
+    border: 0.125rem solid var(--primary-color);
+    width: 3.5rem;
+    height: 3.5rem;
     color: var(--primary-color);
     display: flex;
     justify-content: center;

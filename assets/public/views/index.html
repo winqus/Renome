@@ -7,9 +7,6 @@
     <title>Renome</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/renomeIcons.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <script src="../js/main.js" defer></script>
 </head>
 <body>
@@ -70,22 +67,46 @@
 
     </header>
 
-    <section class="carousel">
-      <img id="carouselImage1" class="carousel__image" src="../img/carousel_img_1.png" alt="Bowl of asian food">
-      <div class="carousel__text-wrapper">
-        <h1 class="carousel__title">made with love</h1>
-        <h1 class="carousel__title carousel__title--alt">for you</h1>
+    <section id="carousel" class="carousel">
+      <div class="carousel__slide-track-container">
+        <ul id="carouselTrack" class="carousel__slide-track carousel__slide-track--sliding">
+          <li class="carousel__slide">
+            <img class="carousel__image" src="../img/carousel_img_1.png" alt="eggs and chicken">
+            <div class="carousel__image-overlay-blue"></div>
+            <div class="carousel__text-wrapper">
+              <h1 class="carousel__title">made with love</h1>
+              <h1 class="carousel__title carousel__title--sub">for you</h1>
+            </div>
+          </li>
+          <li class="carousel__slide">
+            <img class="carousel__image" src="../img/carousel_img_2.png" alt="something more">
+            <div class="carousel__image-overlay-blue"></div>
+            <div class="carousel__text-wrapper">
+              <h1 class="carousel__title">made with hate</h1>
+              <h1 class="carousel__title carousel__title--sub">for myself</h1>
+            </div>
+          </li>
+          <li class="carousel__slide">
+            <img class="carousel__image" src="../img/carousel_img_3.png" alt="oranges and laptops">
+            <div class="carousel__image-overlay-blue"></div>
+            <div class="carousel__text-wrapper">
+              <h1 class="carousel__title">oranges and laptops</h1>
+              <h1 class="carousel__title carousel__title--sub">for everyone</h1>
+            </div>
+          </li>
+        </ul>
       </div>
+
       <div class="carousel__buttons">
-        <button class="carousel__btn"><i class="icon-arrow-left"></i></button>
-        <button class="carousel__btn"><i class="icon-arrow-right"></i></button>
+        <button id="carouselLeftBtn" class="carousel__btn"><i class="icon-arrow-left"></i></button>
+        <button id="carouselRightBtn"  class="carousel__btn"><i class="icon-arrow-right"></i></button>
       </div>
     </section>
 
     <section class="about">
       <div class="about__image-container">
-        <img src="../img/about_img_2.png" alt="Several white houses" class="about__image about__image--right">
-        <img src="../img/about_img_1.png" alt="Building seen through tree leaves" class="about__image about__image--left about__image--on-top">
+        <img src="../img/about_img_2.png" alt="Several white houses" class="about__image about__image--right" loading="lazy">
+        <img src="../img/about_img_1.png" alt="Building seen through tree leaves" class="about__image about__image--left about__image--on-top" loading="lazy">
       </div>
       <h1 class="about__title">about</h1>
       <h2 class="about__title about__title--alt">WE CREATE DELICIOUS MEMORIES</h2>
@@ -98,12 +119,12 @@
       <h1 class="gallery__title">gallery</h1>
       <h2 class="gallery__title gallery__title--alt">MORE ABOUT US VIA PHOTOS</h2>
       <div class="gallery__image-container">
-        <img src="../img/gallery_img_1.png" alt="Caffe bar" class="gallery__image">
-        <img src="../img/gallery_img_3.png" alt="Tables inside caffe bar" class="gallery__image">
-        <img src="../img/gallery_img_2.png" alt="Old building basking in sunlight" class="gallery__image">
-        <img src="../img/gallery_img_6.png" alt="Buttermilk donuts" class="gallery__image">
-        <img src="../img/gallery_img_5.png" alt="Salad in a bowl" class="gallery__image">
-        <img src="../img/gallery_img_4.png" alt="Todays specials menu" class="gallery__image">
+        <img src="../img/gallery_img_1.png" alt="Caffe bar" class="gallery__image" loading="lazy">
+        <img src="../img/gallery_img_3.png" alt="Tables inside caffe bar" class="gallery__image" loading="lazy">
+        <img src="../img/gallery_img_2.png" alt="Old building basking in sunlight" class="gallery__image" loading="lazy">
+        <img src="../img/gallery_img_6.png" alt="Buttermilk donuts" class="gallery__image" loading="lazy">
+        <img src="../img/gallery_img_5.png" alt="Salad in a bowl" class="gallery__image" loading="lazy">
+        <img src="../img/gallery_img_4.png" alt="Todays specials menu" class="gallery__image" loading="lazy">
       </div>
     </section>
 
