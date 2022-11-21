@@ -10,6 +10,10 @@
   font-family: "Montserrat-ExtraBold";
   src: url("../fonts/Montserrat-ExtraBold.ttf");
 }
+@font-face {
+  font-family: "Pacifico";
+  src: url("../fonts/pacifico-regular.ttf");
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -298,42 +302,68 @@ header {
 
 .carousel {
   width: 100%;
+  height: 450px;
   position: relative;
+}
+.carousel__slide-track-container {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.carousel__slide-track {
+  position: relative;
+  height: 100%;
+  list-style: none;
+}
+.carousel__slide-track--sliding {
+  transition: transform 450ms ease-in;
+}
+.carousel__slide {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
 }
 .carousel__image {
   width: 100%;
-  height: auto;
-  filter: brightness(90%);
+}
+.carousel__image-overlay-blue {
+  position: absolute;
+  opacity: 0.122;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #1d2533;
 }
 .carousel__text-wrapper {
   position: absolute;
   top: 51%;
-  left: 1rem;
+  left: 1.1875rem;
 }
 .carousel__title {
   font-family: "axis";
   color: var(--primary-color);
-  font-size: 1.65rem;
-  letter-spacing: 0.25rem;
+  font-size: 1.75rem;
+  letter-spacing: 0.1875rem;
 }
-.carousel__title--alt {
-  margin-top: 0.1875rem;
-  font-family: "axis";
+.carousel__title--sub {
+  font-family: "Montserrat-Bold";
+  font-size: 1.375rem;
+  letter-spacing: 0.125rem;
   color: var(--accent-color);
-  font-size: 1.4rem;
-  letter-spacing: 0.0938rem;
+  margin-top: 0.1875rem;
 }
 .carousel__buttons {
   position: absolute;
   bottom: 3.125rem;
-  left: 0.9375rem;
+  left: 1.25rem;
   display: flex;
 }
 .carousel__btn {
-  margin-right: 0.9375rem;
+  margin-right: 0.875rem;
   border: 0.125rem solid var(--primary-color);
-  width: 3.4375rem;
-  height: 3.4375rem;
+  width: 3.5rem;
+  height: 3.5rem;
   color: var(--primary-color);
   display: flex;
   justify-content: center;
