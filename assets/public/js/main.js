@@ -146,4 +146,7 @@ window.onclick = (event) => {
 
 positionSlidesFromSlideIndex();
 setCarouselHeightToSlideImageHeight();
-setTimeout()
+
+if (getCarouselImageHeight() === 0) {
+  slides[0].querySelector('.carousel__image').addEventListener('load', setCarouselHeightToSlideImageHeight);
+}
