@@ -32,11 +32,15 @@ button {
 }
 
 :root {
+  --max-content-width: 100%;
   --primary-color: #fff;
   --secondary-color: #000;
   --text-color-dark: #1e2633;
   --accent-color: #985e5b;
-  --title-font-size: 1.6rem;
+  --icon-color-dark: #1d2533;
+  --icon-border-color-light: #ebebeb;
+  --icon-border-color-dark: #1e2633;
+  --title-font-size: 1.5625rem;
   --btn-font-size: 20rem;
   --description-text-color: #494949;
   --footer-bg-color: #edeff2;
@@ -66,10 +70,94 @@ header {
 .nav-menu__list {
   display: flex;
   flex-direction: column;
+  position: fixed;
   width: 100%;
+  max-width: var(--max-content-width);
+  overflow-y: scroll;
+  max-height: calc(100vh - 4.125rem);
+  background-color: var(--primary-color);
+  z-index: 1;
+}
+.nav-menu__list--hide-vertical {
+  transition: all 450ms ease-in-out;
+  opacity: 0;
+  top: -100%;
+  pointer-events: none;
+}
+.nav-menu__list--show-vertical {
+  transition: all 450ms ease-in-out;
+  top: 4.125rem;
+}
+.nav-menu__list--hide-horizontal {
+  transition: all 450ms ease-in-out;
+  opacity: 0;
+  margin-left: -100%;
+  top: 4.125rem;
+  pointer-events: none;
+}
+.nav-menu__list--show-horizontal {
+  transition: all 450ms ease-in-out;
+  margin-left: 0;
+  top: 4.125rem;
 }
 .nav-menu__item {
+  padding-inline: 0.625rem;
+  color: var(--secondary-color);
   width: 100%;
+  font-family: "Montserrat-ExtraBold";
+  letter-spacing: 0.125rem;
+  font-size: 0.75rem;
+  line-height: 4.0625rem;
+  border-top: 0.0625rem solid #f2f2f2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-menu__item--selected {
+  color: var(--accent-color);
+}
+.nav-menu__item--no-top-border {
+  border-top: 0;
+}
+.nav-menu__item:hover {
+  color: var(--accent-color);
+}
+.nav-menu__item > a {
+  color: inherit;
+}
+.nav-menu__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.0625rem solid var(--icon-border-color-light);
+  width: 2.6875rem;
+  height: 2.6875rem;
+  color: var(--icon-color-dark);
+  font-size: 0.75rem;
+}
+.nav-menu__button:hover {
+  border: 0.0625rem solid var(--icon-border-color-dark);
+  color: var(--primary-color);
+  background-color: var(--icon-color-dark);
+}
+.nav-menu__search-item {
+  padding-inline: 0.625rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0;
+}
+.nav-menu__search-item-input {
+  font-family: "Montserrat-Bold";
+  letter-spacing: 0.125rem;
+  font-size: 0.75rem;
+  line-height: 4.0625rem;
+  border: 0;
+  color: #bbbdbf;
+  width: 90%;
+}
+.nav-menu__search-item-icon {
+  font-size: 0.75rem;
 }
 .nav-menu__title {
   font-family: Pacifico;
@@ -123,18 +211,89 @@ header {
 .nav-menu__icon {
   color: var(--secondary-color);
 }
+.nav-menu__icon-hamburger {
+  border: var(--icon-color-dark) solid 1px;
+  position: absolute;
+  background-color: var(--icon-color-dark);
+  width: 1.125rem;
+  height: 0.125rem;
+  border-radius: 0.0625rem;
+}
+.nav-menu__icon-hamburger::before, .nav-menu__icon-hamburger::after {
+  content: "";
+  background-color: var(--icon-color-dark);
+  width: 1.125rem;
+  height: 0.125rem;
+  position: absolute;
+  border-radius: 0.0625rem;
+  display: block;
+  left: -0.0625rem;
+  top: -0.0625rem;
+}
+.nav-menu__icon-hamburger::before {
+  transform: translateY(-0.3125rem);
+}
+.nav-menu__icon-hamburger::after {
+  transform: translateY(0.3125rem);
+}
 .nav-menu__btnText {
   font-family: "Montserrat-Bold";
   font-weight: bold;
   font-size: 0.75rem;
-  letter-spacing: 2px;
+  letter-spacing: 0.125rem;
   align-self: flex-end;
   margin-left: 0.6875rem;
 }
 .nav-menu__vertical-line {
   border-left: 0.0625rem solid var(--secondary-color);
   height: 0.9375rem;
-  margin-inline: 1rem;
+  margin-inline: 0.875rem;
+}
+
+.icon-hamburger {
+  width: 1.125rem;
+  height: 0.9375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-hamburger__bars {
+  width: 1.125rem;
+  height: 0.1rem;
+  background-color: var(--icon-color-dark);
+  position: absolute;
+  border-radius: 0.0625rem;
+  transition: all 450ms ease-in-out;
+}
+.icon-hamburger__bars::before, .icon-hamburger__bars::after {
+  content: "";
+  width: 1.125rem;
+  height: 0.1rem;
+  background-color: var(--icon-color-dark);
+  position: absolute;
+  border-radius: 0.0625rem;
+  margin-left: -0.5625rem;
+  transform: rotateZ(0deg);
+}
+.icon-hamburger__bars::before {
+  transform: translateY(-0.4rem);
+  transition: all 450ms ease-in-out;
+}
+.icon-hamburger__bars::after {
+  transform: translateY(0.4rem);
+  transition: all 450ms ease-in-out;
+}
+.icon-hamburger--active > .icon-hamburger__bars {
+  transition: all 450ms ease-in-out;
+  background-color: rgba(255, 255, 255, 0);
+}
+.icon-hamburger--active > .icon-hamburger__bars::before {
+  transform: rotateZ(45deg);
+  transition: all 450ms ease-in-out;
+}
+.icon-hamburger--active > .icon-hamburger__bars::after {
+  transform: rotateZ(-45deg);
+  transition: all 450ms ease-in-out;
 }
 
 .carousel {
@@ -279,7 +438,6 @@ header {
 }
 
 .footer {
-  --item-color: #1c2532;
   width: 100%;
   background-color: var(--footer-bg-color);
   display: flex;
@@ -290,37 +448,39 @@ header {
 }
 .footer__header {
   font-family: "Montserrat-ExtraBold";
-  font-size: 0.7rem;
-  color: var(--item-color);
+  font-size: 0.75rem;
+  color: var(--text-color-dark);
 }
 .footer__icons {
   margin-top: 0.75rem;
   display: flex;
   flex-direction: row;
-  color: var(--item-color);
 }
 .footer__icon {
   border-radius: 50%;
-  border: 0.125rem solid var(--item-color);
-  color: var(--item-color);
-  width: 2rem;
-  height: 2rem;
+  border: 0.125rem solid var(--icon-border-color-dark);
+  color: var(--icon-color-dark);
+  width: 2.125rem;
+  height: 2.125rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-inline: 0.3125rem;
+  margin-inline: 0.2813rem;
 }
 .footer__company-title {
   font-family: "Pacifico";
-  font-size: 1.3rem;
+  letter-spacing: 0.125rem;
+  font-size: 1.25rem;
   margin-top: 1.5rem;
+  color: var(--text-color-dark);
 }
 .footer__copyright-text {
   font-family: "Montserrat-ExtraBold";
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   letter-spacing: 0.0625rem;
   margin-top: 1.5rem;
   text-align: center;
+  color: var(--text-color-dark);
 }
 
 html {
@@ -329,7 +489,7 @@ html {
 
 body {
   background-color: var(--primary-color);
-  max-width: max(31.25rem, 30%);
+  max-width: var(--max-content-width);
   margin: auto;
 }
 

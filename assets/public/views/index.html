@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Renome</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/renomeIcons.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
@@ -20,7 +21,7 @@
 
           <div class="nav-menu__cart-dropdown">
             <button id="cartBtn" class="nav-menu__btn">
-              <i class="nav-menu__icon fa fa-shopping-cart"></i>
+              <i class="nav-menu__icon icon-cart"></i>
               <div class="nav-menu__btnText">2</div>
             </button>
             <ul id="cartDropdown" class="nav-menu__cart-dropdown-content">
@@ -31,23 +32,53 @@
           </div>
 
           <span class="nav-menu__vertical-line"></span>
-          <button class="nav-menu__btn nav-menu__btn--rightMost">
-            <i class="nav-menu__icon fa fa-bars"></i>
+          <button id="navBtn" class="nav-menu__btn nav-menu__btn--rightMost">
+            <i id="navHambugerIcon" class="nav-menu__icon icon-hamburger">
+              <label class="icon-hamburger__bars"></label>
+            </i>
           </button>
         </div>
+
+        <ul id="navMenu" class="nav-menu__list nav-menu__list--hide-vertical">
+          <div class="nav-menu__search-item">
+            <input type=""  class="nav-menu__search-item-input" placeholder="Search...">
+            <button><i class="nav-menu__search-item-icon icon-search"></i></button>
+          </div>
+          <a href="#home" class="nav-menu__item nav-menu__item--selected">HOME</a>
+          <a href="#about" class="nav-menu__item">ABOUT</a>
+          <a href="#menu" class="nav-menu__item">MENU</a>
+          <a href="#reservations" class="nav-menu__item">RESERVATIONS</a>
+          <a href="#blog" class="nav-menu__item">BLOG</a>
+          <div id="featuresBtn" class="nav-menu__item">
+            <a href="#features" class="">FEATURES</a>
+            <button class="nav-menu__button"><i class="icon-arrow-right-features"></i></button>
+          </div>
+          <a href="#shop" class="nav-menu__item">SHOP</a>
+          <a href="#contact" class="nav-menu__item">CONTACT</a>
+        </ul>
+
+        <ul id="featuresSubMenu" class="nav-menu__list nav-menu__list--hide-horizontal">
+          <div id="backBtn" class="nav-menu__item nav-menu__item--no-top-border">
+            <button class="nav-menu__button"><i class="icon-arrow-left-features"></i></button>
+            <a class="">BACK</a>
+          </div>
+          <a href="#blog" class="nav-menu__item">One page</a>
+          <a href="#home" class="nav-menu__item nav-menu__item">Portfolio</a>
+          <a href="#blog" class="nav-menu__item">Shortcodes</a>
+        </ul>
       </nav>
 
     </header>
 
     <section class="carousel">
-      <img class="carousel__image" src="../img/carousel_img_1.png" alt="Bowl of asian food">
+      <img id="carouselImage1" class="carousel__image" src="../img/carousel_img_1.png" alt="Bowl of asian food">
       <div class="carousel__text-wrapper">
         <h1 class="carousel__title">made with love</h1>
         <h1 class="carousel__title carousel__title--alt">for you</h1>
       </div>
       <div class="carousel__buttons">
-        <button class="carousel__btn"><i class="fa fa-chevron-left"></i></button>
-        <button class="carousel__btn"><i class="fa fa-chevron-right"></i></button>
+        <button class="carousel__btn"><i class="icon-arrow-left"></i></button>
+        <button class="carousel__btn"><i class="icon-arrow-right"></i></button>
       </div>
     </section>
 
@@ -79,9 +110,9 @@
     <footer class="footer">
       <h3 class="footer__header">FOLLOW US:</h3>
       <div class="footer__icons">
-        <a href="#fb" class="footer__icon"><i class="fab fa-facebook-f"></i></a>
-        <a href="#twitter" class="footer__icon"><i class="fab fa-twitter"></i></a>
-        <a href="#gplus" class="footer__icon"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#fb" class="footer__icon"><i class="icon-facebook"></i></a>
+        <a href="#twitter" class="footer__icon"><i class="icon-twitter"></i></a>
+        <a href="#gplus" class="footer__icon"><i class="icon-google-plus"></i></a>
       </div>
       <a href="#" class="footer__company-title">Renome</a>
       <h2 class="footer__copyright-text">COPYRIGHT 2015 RENOME BY ESTETIQ</h2>
