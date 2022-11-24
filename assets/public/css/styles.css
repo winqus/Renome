@@ -77,8 +77,8 @@ header {
   position: fixed;
   width: 100%;
   max-width: var(--max-content-width);
-  overflow-y: scroll;
-  max-height: calc(100vh - 4.125rem);
+  overflow-y: auto;
+  max-height: calc(100% - 4.125rem);
   background-color: var(--primary-color);
   z-index: 1;
 }
@@ -164,7 +164,7 @@ header {
   font-size: 0.75rem;
 }
 .nav-menu__title {
-  font-family: Pacifico;
+  font-family: "Pacifico";
   color: var(--secondary-color);
   text-decoration: none;
   font-size: var(--title-font-size);
@@ -216,7 +216,6 @@ header {
   color: var(--secondary-color);
 }
 .nav-menu__icon-hamburger {
-  border: var(--icon-color-dark) solid 1px;
   position: absolute;
   background-color: var(--icon-color-dark);
   width: 1.125rem;
@@ -525,4 +524,8 @@ body {
 
 .horizontal-space-filler {
   width: 100%;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+.no-scroll {
+  overflow: hidden;
+}
