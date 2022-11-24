@@ -3,6 +3,10 @@
   src: url("../fonts/axis.otf");
 }
 @font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../fonts/Montserrat-Regular.ttf");
+}
+@font-face {
   font-family: "Montserrat-Bold";
   src: url("../fonts/Montserrat-Bold.ttf");
 }
@@ -39,14 +43,13 @@ button {
   --max-content-width: 100%;
   --primary-color: #fff;
   --secondary-color: #000;
-  --text-color-dark: #1e2633;
   --accent-color: #985e5b;
   --icon-color-dark: #1d2533;
   --icon-border-color-light: #ebebeb;
   --icon-border-color-dark: #1e2633;
-  --title-font-size: 1.5625rem;
   --btn-font-size: 20rem;
-  --description-text-color: #494949;
+  --text-color-gray: #404040;
+  --text-color-dark: #1e2633;
   --footer-bg-color: #edeff2;
 }
 
@@ -108,7 +111,7 @@ header {
   padding-inline: 0.625rem;
   color: var(--secondary-color);
   width: 100%;
-  font-family: "Montserrat-ExtraBold";
+  font-family: "Montserrat-Bold";
   letter-spacing: 0.125rem;
   font-size: 0.75rem;
   line-height: 4.0625rem;
@@ -167,7 +170,7 @@ header {
   font-family: "Pacifico";
   color: var(--secondary-color);
   text-decoration: none;
-  font-size: var(--title-font-size);
+  font-size: 1.5625rem;
   letter-spacing: 0.1875rem;
   font-weight: 400;
 }
@@ -241,7 +244,6 @@ header {
 }
 .nav-menu__btnText {
   font-family: "Montserrat-Bold";
-  font-weight: bold;
   font-size: 0.75rem;
   letter-spacing: 0.125rem;
   align-self: flex-end;
@@ -376,6 +378,7 @@ header {
 .about__image-container {
   margin-left: 0.625rem;
   margin-right: 0.625rem;
+  margin-bottom: 4.375rem;
   display: flex;
   flex-direction: column;
 }
@@ -389,31 +392,31 @@ header {
   margin-top: -2.25rem;
 }
 .about__title {
-  margin-top: 3.375rem;
   margin-left: 0.5625rem;
   font-family: "axis";
-  color: var(--secondary-color);
-  font-size: 2.4rem;
+  color: var(--text-color-dark);
+  font-size: 2.375rem;
   letter-spacing: 0.5rem;
 }
 .about__title--alt {
   margin-top: 0.5625rem;
-  font-family: "Montserrat-ExtraBold";
+  font-family: "Montserrat-Bold";
   color: var(--accent-color);
-  font-size: 0.7rem;
-  letter-spacing: 1px;
+  font-size: 0.6875rem;
+  letter-spacing: 0.0625rem;
 }
 .about__text {
   margin-top: 1rem;
   margin-left: 0.625rem;
   margin-right: 0.75rem;
   margin-bottom: 4.0625rem;
-  font-family: "Montserrat-Bold";
-  color: var(--description-text-color);
+  font-family: "Montserrat-Regular";
+  font-weight: 400;
+  color: var(--text-color-gray);
   font-size: 0.75rem;
   line-height: 1.875rem;
   word-break: normal;
-  letter-spacing: 0.1125rem;
+  letter-spacing: 0.125rem;
 }
 
 .gallery {
@@ -442,28 +445,16 @@ header {
   margin-top: 3.375rem;
   margin-left: 0.5625rem;
   font-family: "axis";
-  color: var(--secondary-color);
-  font-size: 2.4rem;
+  color: var(--text-color-dark);
+  font-size: 2.375rem;
   letter-spacing: 0.5rem;
 }
 .gallery__title--alt {
-  margin-top: 0.5625rem;
-  font-family: "Montserrat-ExtraBold";
-  color: var(--accent-color);
-  font-size: 0.7rem;
-  letter-spacing: 0.0625rem;
-}
-.gallery__text {
-  margin-top: 1rem;
-  margin-left: 0.625rem;
-  margin-right: 0.75rem;
-  margin-bottom: 4.0625rem;
+  margin-top: 0.75rem;
   font-family: "Montserrat-Bold";
-  color: var(--description-text-color);
-  font-size: 0.7rem;
-  line-height: 1.875rem;
-  word-break: normal;
-  letter-spacing: 0.1125rem;
+  color: var(--accent-color);
+  font-size: 0.6875rem;
+  letter-spacing: 0.0625rem;
 }
 
 .footer {
@@ -476,7 +467,7 @@ header {
   padding-bottom: 1.875rem;
 }
 .footer__header {
-  font-family: "Montserrat-ExtraBold";
+  font-family: "Montserrat-Bold";
   font-size: 0.75rem;
   color: var(--text-color-dark);
 }
@@ -504,7 +495,7 @@ header {
   color: var(--text-color-dark);
 }
 .footer__copyright-text {
-  font-family: "Montserrat-ExtraBold";
+  font-family: "axis";
   font-size: 0.75rem;
   letter-spacing: 0.0625rem;
   margin-top: 1.5rem;
