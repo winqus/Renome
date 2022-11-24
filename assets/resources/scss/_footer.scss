@@ -8,20 +8,20 @@
   padding-bottom: 1.875rem;
 
   &__header {
-    font-family: 'Montserrat-ExtraBold';
+    font-family: "Montserrat-ExtraBold";
     font-size: 0.75rem;
     color: var(--text-color-dark);
   }
 
   &__icons {
-    margin-top: .75rem;
+    margin-top: 0.75rem;
     display: flex;
     flex-direction: row;
   }
 
   &__icon {
     border-radius: 50%;
-    border: .125rem solid var(--icon-border-color-dark);
+    border: 0.125rem solid var(--icon-border-color-dark);
     color: var(--icon-color-dark);
     width: 2.125rem;
     height: 2.125rem;
@@ -32,7 +32,7 @@
   }
 
   &__company-title {
-    font-family: 'Pacifico';
+    font-family: "Pacifico";
     letter-spacing: 0.125rem;
     font-size: 1.25rem;
     margin-top: 1.5rem;
@@ -40,9 +40,9 @@
   }
 
   &__copyright-text {
-    font-family: 'Montserrat-ExtraBold';
+    font-family: "Montserrat-ExtraBold";
     font-size: 0.75rem;
-    letter-spacing: .0625rem;
+    letter-spacing: 0.0625rem;
     margin-top: 1.5rem;
     text-align: center;
     color: var(--text-color-dark);
