@@ -68,7 +68,7 @@ header {
 
     color: var(--secondary-color);
     width: 100%;
-    font-family: "Montserrat-ExtraBold";
+    font-family: "Montserrat-Bold";
     letter-spacing: 0.125rem;
     font-size: 0.75rem;
     line-height: 4.0625rem;
@@ -138,7 +138,7 @@ header {
     font-family: "Pacifico";
     color: var(--secondary-color);
     text-decoration: none;
-    font-size: var(--title-font-size);
+    font-size: 1.5625rem;
     letter-spacing: 0.1875rem;
     font-weight: 400;
   }
@@ -229,7 +229,6 @@ header {
 
   &__btnText {
     font-family: "Montserrat-Bold";
-    font-weight: bold;
     font-size: 0.75rem;
     letter-spacing: 0.125rem;
     align-self: flex-end;
