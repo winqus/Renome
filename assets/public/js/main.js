@@ -73,6 +73,7 @@ const closeAllNavMenus = () => {
     'nav-menu__list--show-horizontal',
     'nav-menu__list--hide-horizontal',
   );
+  document.querySelector('body').classList.remove('no-scroll');
 };
 const isCartDropdownOpen = () => cartDropdown.classList.contains('nav-menu__cart-dropdown-content--show');
 
@@ -92,6 +93,7 @@ mainNavMenuButton.onclick = () => {
       'nav-menu__list--show-vertical',
     );
     navHambugerIcon.classList.add('icon-hamburger--active');
+    document.querySelector('body').classList.add('no-scroll');
   }
 };
 
