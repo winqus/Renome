@@ -1,5 +1,5 @@
-import '../scss/styles.scss';
-import '../css/renomeIcons.css';
+import './scss/styles.scss';
+import './css/renomeIcons.css';
 
 const cartBtn = document.getElementById('cartBtn');
 const cartDropdown = document.getElementById('cartDropdown');

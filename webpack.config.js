@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    bundle: path.resolve(__dirname, 'src/js/index.js'),
+    bundle: path.resolve(__dirname, 'src/index.js'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -54,7 +54,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Renome',
       filename: 'index.html',
-      template: 'src/templates/index.html',
+      template: 'src/template.html',
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
