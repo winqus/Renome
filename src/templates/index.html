@@ -5,9 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Renome</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/renomeIcons.css">
-    <script src="../js/main.js" defer></script>
 </head>
 <body>
     <header>
@@ -47,7 +44,7 @@
           <a href="#reservations" class="nav-menu__item">RESERVATIONS</a>
           <a href="#blog" class="nav-menu__item">BLOG</a>
           <div id="featuresBtn" class="nav-menu__item">
-            <a href="#features" class="">FEATURES</a>
+            <a href="#features">FEATURES</a>
             <button class="nav-menu__button"><i class="icon-arrow-right-features"></i></button>
           </div>
           <a href="#shop" class="nav-menu__item">SHOP</a>
@@ -57,21 +54,20 @@
         <ul id="featuresSubMenu" class="nav-menu__list nav-menu__list--hide-horizontal">
           <div id="backBtn" class="nav-menu__item nav-menu__item--no-top-border">
             <button class="nav-menu__button"><i class="icon-arrow-left-features"></i></button>
-            <a class="">BACK</a>
+            <a>BACK</a>
           </div>
           <a href="#blog" class="nav-menu__item">One page</a>
           <a href="#home" class="nav-menu__item nav-menu__item">Portfolio</a>
           <a href="#blog" class="nav-menu__item">Shortcodes</a>
         </ul>
       </nav>
-
     </header>
 
     <section id="carousel" class="carousel">
       <div class="carousel__slide-track-container">
         <ul id="carouselTrack" class="carousel__slide-track carousel__slide-track--sliding">
           <li class="carousel__slide">
-            <img class="carousel__image" src="../img/carousel_img_1.png" alt="eggs and chicken">
+            <img class="carousel__image" src=<%=require("../img/carousel_img_1.png")%> alt="eggs and chicken">
             <div class="carousel__image-overlay-blue"></div>
             <div class="carousel__text-wrapper">
               <h1 class="carousel__title">made with love</h1>
@@ -79,7 +75,7 @@
             </div>
           </li>
           <li class="carousel__slide">
-            <img class="carousel__image" src="../img/carousel_img_2.png" alt="something more">
+            <img class="carousel__image" src=<%=require("../img/carousel_img_2.png")%> alt="something more">
             <div class="carousel__image-overlay-blue"></div>
             <div class="carousel__text-wrapper">
               <h1 class="carousel__title">made with hate</h1>
@@ -87,7 +83,7 @@
             </div>
           </li>
           <li class="carousel__slide">
-            <img class="carousel__image" src="../img/carousel_img_3.png" alt="oranges and laptops">
+            <img class="carousel__image" src=<%=require("../img/carousel_img_3.png")%> alt="oranges and laptops">
             <div class="carousel__image-overlay-blue"></div>
             <div class="carousel__text-wrapper">
               <h1 class="carousel__title">oranges and laptops</h1>
@@ -105,8 +101,8 @@
 
     <section class="about">
       <div class="about__image-container">
-        <img src="../img/about_img_2.png" alt="Several white houses" class="about__image about__image--right" loading="lazy">
-        <img src="../img/about_img_1.png" alt="Building seen through tree leaves" class="about__image about__image--left about__image--on-top" loading="lazy">
+        <img src=<%=require("../img/about_img_2.png")%> alt="Several white houses" class="about__image about__image--right" loading="lazy">
+        <img src=<%=require("../img/about_img_1.png")%> alt="Building seen through tree leaves" class="about__image about__image--left about__image--on-top" loading="lazy">
       </div>
       <h1 class="about__title">about</h1>
       <h2 class="about__title about__title--alt">WE CREATE DELICIOUS MEMORIES</h2>
@@ -119,12 +115,12 @@
       <h1 class="gallery__title">gallery</h1>
       <h2 class="gallery__title gallery__title--alt">MORE ABOUT US VIA PHOTOS</h2>
       <div class="gallery__image-container">
-        <img src="../img/gallery_img_1.png" alt="Caffe bar" class="gallery__image" loading="lazy">
-        <img src="../img/gallery_img_3.png" alt="Tables inside caffe bar" class="gallery__image" loading="lazy">
-        <img src="../img/gallery_img_2.png" alt="Old building basking in sunlight" class="gallery__image" loading="lazy">
-        <img src="../img/gallery_img_6.png" alt="Buttermilk donuts" class="gallery__image" loading="lazy">
-        <img src="../img/gallery_img_5.png" alt="Salad in a bowl" class="gallery__image" loading="lazy">
-        <img src="../img/gallery_img_4.png" alt="Todays specials menu" class="gallery__image" loading="lazy">
+        <img src=<%=require("../img/gallery_img_1.png")%> alt="Caffe bar" class="gallery__image" loading="lazy">
+        <img src=<%=require("../img/gallery_img_3.png")%> alt="Tables inside caffe bar" class="gallery__image" loading="lazy">
+        <img src=<%=require("../img/gallery_img_2.png")%> alt="Old building basking in sunlight" class="gallery__image" loading="lazy">
+        <img src=<%=require("../img/gallery_img_6.png")%> alt="Buttermilk donuts" class="gallery__image" loading="lazy">
+        <img src=<%=require("../img/gallery_img_5.png")%> alt="Salad in a bowl" class="gallery__image" loading="lazy">
+        <img src=<%=require("../img/gallery_img_4.png")%> alt="Todays specials menu" class="gallery__image" loading="lazy">
       </div>
     </section>
 
