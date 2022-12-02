@@ -35,6 +35,7 @@ header {
     max-height: calc(100% - $nav-menu-height);
     background-color: var(--primary-color);
     z-index: 1;
+    left: 0;
 
     &--hide-vertical {
       transition: all 450ms ease-in-out;
@@ -51,14 +52,14 @@ header {
     &--hide-horizontal {
       transition: all 450ms ease-in-out;
       opacity: 0;
-      margin-left: -100%;
+      left: -100%;
       top: $nav-menu-height;
       pointer-events: none;
     }
 
     &--show-horizontal {
       transition: all 450ms ease-in-out;
-      margin-left: 0;
+      left: 0;
       top: $nav-menu-height;
     }
   }
