@@ -16,11 +16,15 @@ module.exports = {
   },
   plugins: [
     'react',
+    'react-hooks',
   ],
   rules: {
     'no-param-reassign': ['error', { props: false }],
     'linebreak-style': 0,
     'react/react-in-jsx-scope': 0,
     'react/jsx-filename-extension': 0,
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    'react/prop-types': 0,
   },
 };
